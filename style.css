@@ -56,15 +56,25 @@ body {
     height: 100%;
     display: flex;    
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     padding: 1.5rem 0;
     border: 1px solid lightgrey;
     background-color: white;
+    margin: 1rem;
 }
+
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
 .group img {
     max-height: fit-content;
 }
+
+/*.group > * {
+    margin-bottom: 10px;
+}*/
 
 .instagram-logo img{
     height: 3.5rem;
@@ -79,7 +89,7 @@ body {
     position: relative;
     width: 110px;
     height: 110px;
-    margin: 0.5rem;
+    margin: 0.6rem;
 }
 
 .profile-photo img{
@@ -87,4 +97,86 @@ body {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.instagram-login {
+    padding: 8px;
+    background-color: #0095f6;
+    color: white;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    margin-top: 1rem;
+    color: #0095f6;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.download-app {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.download-app:nth-child(1){
+    background-image: url("./img/appstore-button.svg");
+}
+
+.download-app:nth-child(2){
+    background-image: url("./img/playstore-button.png");
+}
+
+/* media queries */
+
+@media (max-width: 1024px){
+    .instagram-wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px){
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+
+    .group {
+        margin: 1px;
+        border: 1px solid transparent;
+    }
 }
